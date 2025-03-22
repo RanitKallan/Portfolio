@@ -22,8 +22,8 @@
 }
 
 .light-mode {
-  --color-primary:  #F19670 ;
-  --color-secondary: #593C8F;
+  --color-primary: #07447d;
+  --color-secondary: #9b8feb;
   --color-white: #FFFFFF;
   --color-black: #000;
   --color-grey0: #f8f8f8;
@@ -309,10 +309,10 @@ section {
   width: 60%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .html {
-  width: 70%;
+  width: 90%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .css {
-  width: 70%;
+  width: 80%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .java {
   width: 60%;
@@ -324,7 +324,7 @@ section {
   width: 70%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .js {
-  width: 40%;
+  width: 60%;
 }
 
 .stat-title {

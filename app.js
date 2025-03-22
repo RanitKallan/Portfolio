@@ -7,7 +7,7 @@ function PageTransitions() {
     // button click active class
     for (let i = 0; i < sectBtn.length; i++) {
         sectBtn[i].addEventListener('click', function() {
-            let currentBtn = document.querySelector('.active-btn'); // Use querySelector to get the first match
+            let currentBtn = document.querySelector('.active-btn'); 
             if (currentBtn) {
                 currentBtn.classList.remove('active-btn'); // Use classList to remove the class
             }
