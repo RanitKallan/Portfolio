@@ -1,166 +1,194 @@
-@media screen  and (max-width: 600px) {
-
-
-    .about-container{
+/* Mobile Devices */
+@media screen and (max-width: 600px) {
+    .about-container {
         grid-template-columns: 1fr;
-        .right-about{
-            grid-template-columns: 1fr;
-            padding-top: 2.5rem;
-        }
-        .left-about{
-            padding-right: 0;
-            p{
-                padding-left: 0;
-            }
-        }
     }
-    .timeline{
-        grid-template-columns: 1fr;
-        padding-bottom: 6rem;
-    }
-
     
-    .portfolios{
+    .right-about {
+        grid-template-columns: 1fr;
+        padding-top: 2.5rem;
+    }
+    
+    .left-about {
+        padding-right: 0;
+    }
+    
+    .left-about p {
+        padding-left: 0;
+    }
+    
+    .timeline,
+    .portfolios,
+    .blogs {
         grid-template-columns: 1fr !important;
         padding-bottom: 6rem;
     }
-    .blogs{
-        grid-template-columns: 1fr !important;
-        padding-bottom: 6rem;
-    }
-
     
-
-    .section{
+    .section {
         padding: 2.5rem !important;
     }
-
-    .main-title{
-        h2{
-            font-size: 2rem;
-            span{
-                font-size: 2.5rem;
-            }
-            .bg-text{
-                font-size: 3rem;
-            }
-        }
-    }
-
     
-}
-
-@media screen  and (max-width: 1432px) {
-    header{
-        padding: 0 !important;
+    .main-title h2 {
+        font-size: 2rem;
     }
-    .section{
-        padding: 7rem 11rem;
+    
+    .main-title h2 span {
+        font-size: 2.5rem;
     }
-    .contact-contain-con{
-        flex-direction: column;
-        .right-contact{
-            margin-left: 0;
-            margin-top: 2.5rem;
-        }
+    
+    .main-title h2 .bg-text {
+        font-size: 3rem;
     }
-    .contact-contain-con .right-contact .i-c-2{
-        flex-direction: column;
-        
+    
+    /* Improve touch targets for mobile */
+    .control {
+        width: 50px;
+        height: 50px;
     }
-    .contact-contain-con .right-contact .i-c-2 :last-child{
-        margin-left: 0;
-        margin-top: 1.5rem;
-
+    
+    /* Optimize images for mobile */
+    .image img {
+        max-width: 100%;
+        height: auto;
     }
 }
 
-@media screen  and (max-width: 1070px) {
-    .about-container{
+/* Tablet and Small Laptops */
+@media screen and (max-width: 1070px) and (min-width: 601px) {
+    .about-container {
         grid-template-columns: 1fr;
-        .right-about{
-            padding-top: 2.5rem;
-        }
     }
-
-    .portfolios{
+    
+    .right-about {
+        padding-top: 2.5rem;
+    }
+    
+    .portfolios,
+    .blogs {
         grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
     }
-    .blogs{
-        grid-template-columns: 1fr 1fr;
+    
+    .main-title h2 {
+        font-size: 4rem;
     }
-
-    .main-title{
-        h2{
-            font-size: 4rem;
-            span{
-                font-size: 4rem;
-            }
-            .bg-text{
-                font-size: 5rem;
-            }
-        }
+    
+    .main-title h2 span {
+        font-size: 4rem;
     }
-
+    
+    .main-title h2 .bg-text {
+        font-size: 5rem;
+    }
+    
+    /* Improved spacing for tablet view */
+    .section {
+        padding: 5rem;
+    }
 }
 
-@media screen  and (max-width: 870px) {
-    .section{
+/* Medium Devices */
+@media screen and (max-width: 870px) {
+    .section {
         padding: 7rem 6rem;
     }
-    header{
+    
+    header {
         padding: 0;
     }
-    header .right-header{
+    
+    header .right-header {
         padding: 0 !important;
     }
-
-    .theme-btn{
+    
+    .theme-btn {
         width: 40px;
         height: 40px;
-        font-size: .5rem;
+        font-size: 0.5rem;
     }
-
-    .header-content{
+    
+    .header-content {
         grid-template-columns: 1fr;
         padding-bottom: 6rem;
     }
-    .left-header{
-        .h-shape{
-            display: none;
-        }
+    
+    .left-header .h-shape {
+        display: none;
     }
-    .right-header{
+    
+    .right-header {
         grid-row: 1;
         width: 90%;
         margin: 0 auto;
-        .name{
-            font-size: 2.5rem !important;
-        }
     }
-    .header-content .left-header .image{
+    
+    .right-header .name {
+        font-size: 2.5rem !important;
+    }
+    
+    .header-content .left-header .image {
         margin: 0 auto;
         width: 90%;
     }
-
-    .about-stats{
-        .progress-bars{
-            grid-template-columns: 1fr;
-        }
+    
+    .about-stats .progress-bars {
+        grid-template-columns: 1fr;
     }
-
-
-    .controlls{
+    
+    .controlls {
         top: auto;
         bottom: 0;
         flex-direction: row;
         justify-content: center;
         left: 50%;
-        transform: translateX( -50% );
+        transform: translateX(-50%);
         width: 100%;
         background-color: var(--color-grey-5);
-        .control{
-            margin: .6rem 1rem;
-        }
+        z-index: 10;
     }
+    
+    .controlls .control {
+        margin: 0.6rem 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* Large Devices */
+@media screen and (max-width: 1432px) {
+    header {
+        padding: 0 !important;
+    }
+    
+    .section {
+        padding: 7rem 11rem;
+    }
+    
+    .contact-contain-con {
+        flex-direction: column;
+    }
+    
+    .contact-contain-con .right-contact {
+        margin-left: 0;
+        margin-top: 2.5rem;
+    }
+    
+    .contact-contain-con .right-contact .i-c-2 {
+        flex-direction: column;
+    }
+    
+    .contact-contain-con .right-contact .i-c-2 :last-child {
+        margin-left: 0;
+        margin-top: 1.5rem;
+    }
+    
+    /* Improved form responsiveness */
+    .submit-btn {
+        width: 100%;
+        margin-top: 2rem;
+    }
+}
+
+/* Add smooth transitions for responsive changes */
+.section, .image, .about-container, .portfolios, .blogs, .timeline {
+    transition: all 0.4s ease-in-out;
 }
